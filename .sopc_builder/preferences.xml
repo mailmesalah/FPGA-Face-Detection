@@ -1,0 +1,19 @@
+<preferences>
+  <systemtable>
+    <columns>
+      <connections
+        preferredWidth="30"
+        />
+      <irq
+        preferredWidth="34"
+        />
+    </columns>
+  </systemtable>
+  <library
+    expandedCategories=""
+    />
+  <window
+    x="344"
+    y="65"
+    />
+</preferences>

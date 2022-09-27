@@ -1,0 +1,192 @@
+Analysis & Synthesis report for FaceDetection
+Mon Apr 29 19:59:58 2013
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++------------------------------------+-----------------------------------------+
+; Analysis & Synthesis Status        ; Failed - Mon Apr 29 19:59:58 2013       ;
+; Quartus II Version                 ; 7.2 Build 151 09/26/2007 SJ Web Edition ;
+; Revision Name                      ; FaceDetection                           ;
+; Top-level Entity Name              ; FaceDetection                           ;
+; Family                             ; Cyclone II                              ;
+; Total logic elements               ; N/A until Partition Merge               ;
+;     Total combinational functions  ; N/A until Partition Merge               ;
+;     Dedicated logic registers      ; N/A until Partition Merge               ;
+; Total registers                    ; N/A until Partition Merge               ;
+; Total pins                         ; N/A until Partition Merge               ;
+; Total virtual pins                 ; N/A until Partition Merge               ;
+; Total memory bits                  ; N/A until Partition Merge               ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge               ;
+; Total PLLs                         ; N/A until Partition Merge               ;
++------------------------------------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                         ; Setting            ; Default Value      ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                         ; EP2C20F484C6       ;                    ;
+; Top-level entity name                                                          ; FaceDetection      ; FaceDetection      ;
+; Family name                                                                    ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                                        ; Off                ;                    ;
+; Use smart compilation                                                          ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation                            ; 1                  ; 1                  ;
+; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
+; Preserve fewer node names                                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
+; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                                       ; Auto               ; Auto               ;
+; Safe State Machine                                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
+; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
+; Parallel Synthesis                                                             ; Off                ; Off                ;
+; DSP Block Balancing                                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
+; Optimization Technique -- Cyclone II/Cyclone III                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
+; Auto Carry Chains                                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
+; Perform gate-level register retiming                                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
+; Auto ROM Replacement                                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                              ; Off                ; Off                ;
+; Auto Resource Sharing                                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                  ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                           ; On                 ; On                 ;
+; Block Design Naming                                                            ; Auto               ; Auto               ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
+    Info: Processing started: Mon Apr 29 19:59:55 2013
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FaceDetection -c FaceDetection
+Info: Found 1 design units, including 1 entities, in source file ClockDivider.v
+    Info: Found entity 1: ClockDivider
+Info: Found 5 design units, including 5 entities, in source file FaceDetection.v
+    Info: Found entity 1: FaceDetection
+    Info: Found entity 2: ImageProcessor
+    Info: Found entity 3: ReadWritePixel
+    Info: Found entity 4: CaptureCamera
+    Info: Found entity 5: VGAController
+Critical Warning (10846): Verilog HDL Instantiation warning at FaceDetection.v(76): instance has no name
+Info: Elaborating entity "FaceDetection" for the top level hierarchy
+Warning (10034): Output port "CamReset" at FaceDetection.v(19) has no driver
+Warning (10034): Output port "DRAM_CLK" at FaceDetection.v(24) has no driver
+Info: Elaborating entity "CaptureCamera" for hierarchy "CaptureCamera:CCDCamera"
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(450): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(490): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(521): truncated value with size 32 to match size of target (16)
+Info: Elaborating entity "ImageProcessor" for hierarchy "ImageProcessor:comb_20"
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(137): truncated value with size 32 to match size of target (12)
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(138): truncated value with size 32 to match size of target (12)
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(139): truncated value with size 32 to match size of target (12)
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(171): truncated value with size 32 to match size of target (12)
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(176): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(206): truncated value with size 32 to match size of target (12)
+Warning (10230): Verilog HDL assignment warning at FaceDetection.v(211): truncated value with size 32 to match size of target (8)
+Warning (10034): Output port "DataMask[1]" at FaceDetection.v(112) has no driver
+Warning (10034): Output port "DataMask[0]" at FaceDetection.v(112) has no driver
+Info (10041): Inferred latch for "Data[0]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[1]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[2]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[3]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[4]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[5]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[6]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[7]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[8]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[9]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[10]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[11]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[12]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[13]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[14]" at FaceDetection.v(135)
+Info (10041): Inferred latch for "Data[15]" at FaceDetection.v(135)
+Info: Elaborating entity "ReadWritePixel" for hierarchy "ImageProcessor:comb_20|ReadWritePixel:RWPixel"
+Warning (10036): Verilog HDL or VHDL warning at FaceDetection.v(265): object "RAS" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at FaceDetection.v(265): object "CAS" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at FaceDetection.v(265): object "WE" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at FaceDetection.v(265): object "CS" assigned a value but never read
+Warning (10034): Output port "RowAddressStrobe" at FaceDetection.v(256) has no driver
+Warning (10034): Output port "ColumnAddressStrobe" at FaceDetection.v(256) has no driver
+Warning (10034): Output port "WriteEnable" at FaceDetection.v(256) has no driver
+Warning (10034): Output port "ChipEnable[1]" at FaceDetection.v(257) has no driver
+Warning (10034): Output port "ChipEnable[0]" at FaceDetection.v(257) has no driver
+Warning (10034): Output port "Acknowledge" at FaceDetection.v(258) has no driver
+Error (10028): Can't resolve multiple constant drivers for net "rDataAvailable" at FaceDetection.v(282) File: I:/wORksHoP/Freelancer.Com/FPGA Face Detection/FaceDetection.v Line: 282
+Error (10029): Constant driver at FaceDetection.v(272) File: I:/wORksHoP/Freelancer.Com/FPGA Face Detection/FaceDetection.v Line: 272
+Error (10028): Can't resolve multiple constant drivers for net "rColOrRow" at FaceDetection.v(282) File: I:/wORksHoP/Freelancer.Com/FPGA Face Detection/FaceDetection.v Line: 282
+Error: Can't elaborate user hierarchy "ImageProcessor:comb_20|ReadWritePixel:RWPixel" File: I:/wORksHoP/Freelancer.Com/FPGA Face Detection/FaceDetection.v Line: 151
+Error: Quartus II Analysis & Synthesis was unsuccessful. 4 errors, 25 warnings
+    Info: Allocated 136 megabytes of memory during processing
+    Error: Processing ended: Mon Apr 29 20:00:00 2013
+    Error: Elapsed time: 00:00:05
+
+

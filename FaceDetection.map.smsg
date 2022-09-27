@@ -1,0 +1,2 @@
+Warning (10236): Verilog HDL Implicit Net warning at FaceDetection.v(73): created implicit net for "wCamReset"
+Warning (10236): Verilog HDL Implicit Net warning at FaceDetection.v(74): created implicit net for "wCamExtClock"

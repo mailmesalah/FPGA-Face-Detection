@@ -1,0 +1,589 @@
+Classic Timing Analyzer report for FaceDetection
+Sun Apr 28 15:09:56 2013
+Quartus II Version 7.2 Build 151 09/26/2007 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'Clock27'
+  6. tco
+  7. tpd
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                    ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                        ; To                          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 10.896 ns                        ; VGAController:VGA|HCount[6] ; VGAr[2]                     ; Clock27    ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 12.185 ns                        ; CamData[10]                 ; VGAr[2]                     ; --         ; --       ; 0            ;
+; Clock Setup: 'Clock27'       ; N/A   ; None          ; 312.01 MHz ( period = 3.205 ns ) ; VGAController:VGA|HCount[6] ; VGAController:VGA|VCount[7] ; Clock27    ; Clock27  ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                             ;                             ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+-----------------------------+------------+----------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                      ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                         ; Setting            ; From ; To ; Entity Name ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                    ; EP2C20F484C6       ;      ;    ;             ;
+; Timing Models                                                  ; Final              ;      ;    ;             ;
+; Default hold multicycle                                        ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                      ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                         ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                 ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                               ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                          ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                        ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                               ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                           ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node          ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                          ; 10                 ;      ;    ;             ;
+; Number of paths to report                                      ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                   ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                         ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                     ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                   ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis ; Off                ;      ;    ;             ;
++----------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock27         ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Clock27'                                                                                                                                                                                                                                                  ;
++-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                         ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 326.26 MHz ( period = 3.065 ns )                    ; VGAController:VGA|HCount[3]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.852 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 336.93 MHz ( period = 2.968 ns )                    ; VGAController:VGA|HCount[2]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.755 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 337.50 MHz ( period = 2.963 ns )                    ; VGAController:VGA|HCount[4]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.750 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 340.95 MHz ( period = 2.933 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.720 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 353.36 MHz ( period = 2.830 ns )                    ; VGAController:VGA|HCount[1]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.617 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; VGAController:VGA|HCount[11] ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.586 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 369.55 MHz ( period = 2.706 ns )                    ; VGAController:VGA|HCount[9]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.493 ns                ;
+; N/A                                     ; 374.53 MHz ( period = 2.670 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|woVSync    ; Clock27    ; Clock27  ; None                        ; None                      ; 2.455 ns                ;
+; N/A                                     ; 374.95 MHz ( period = 2.667 ns )                    ; VGAController:VGA|HCount[6]  ; VGAController:VGA|woVSync    ; Clock27    ; Clock27  ; None                        ; None                      ; 2.453 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.80 MHz ( period = 2.661 ns )                    ; VGAController:VGA|HCount[8]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 376.22 MHz ( period = 2.658 ns )                    ; VGAController:VGA|HCount[5]  ; VGAController:VGA|woVSync    ; Clock27    ; Clock27  ; None                        ; None                      ; 2.444 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; VGAController:VGA|HCount[0]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.427 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; VGAController:VGA|HCount[10] ; VGAController:VGA|HCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 381.39 MHz ( period = 2.622 ns )                    ; VGAController:VGA|VCount[10] ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.408 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 383.00 MHz ( period = 2.611 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.398 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 384.47 MHz ( period = 2.601 ns )                    ; VGAController:VGA|VCount[1]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.387 ns                ;
+; N/A                                     ; 387.60 MHz ( period = 2.580 ns )                    ; VGAController:VGA|VCount[8]  ; VGAController:VGA|woVSync    ; Clock27    ; Clock27  ; None                        ; None                      ; 2.365 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[2]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[1]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[11] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[3]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[0]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[4]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[5]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[6]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; VGAController:VGA|VCount[3]  ; VGAController:VGA|VCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 392.00 MHz ( period = 2.551 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|HCount[8]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.337 ns                ;
+; N/A                                     ; 392.00 MHz ( period = 2.551 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|HCount[7]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.337 ns                ;
+; N/A                                     ; 392.00 MHz ( period = 2.551 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|HCount[9]  ; Clock27    ; Clock27  ; None                        ; None                      ; 2.337 ns                ;
+; N/A                                     ; 392.00 MHz ( period = 2.551 ns )                    ; VGAController:VGA|HCount[7]  ; VGAController:VGA|HCount[10] ; Clock27    ; Clock27  ; None                        ; None                      ; 2.337 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                              ;                              ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                              ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------------+---------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From                         ; To      ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------------+---------+------------+
+; N/A                                     ; None                                                ; 10.896 ns  ; VGAController:VGA|HCount[6]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.887 ns  ; VGAController:VGA|HCount[5]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.683 ns  ; VGAController:VGA|VCount[3]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.654 ns  ; VGAController:VGA|HCount[4]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.641 ns  ; VGAController:VGA|HCount[6]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.632 ns  ; VGAController:VGA|HCount[5]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.630 ns  ; VGAController:VGA|HCount[6]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.621 ns  ; VGAController:VGA|HCount[5]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.525 ns  ; VGAController:VGA|HCount[7]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.428 ns  ; VGAController:VGA|VCount[3]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.417 ns  ; VGAController:VGA|VCount[3]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.410 ns  ; VGAController:VGA|HCount[6]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.403 ns  ; VGAController:VGA|HCount[6]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.401 ns  ; VGAController:VGA|HCount[5]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.399 ns  ; VGAController:VGA|HCount[4]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.394 ns  ; VGAController:VGA|HCount[5]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.388 ns  ; VGAController:VGA|HCount[4]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.381 ns  ; VGAController:VGA|VCount[2]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.380 ns  ; VGAController:VGA|HCount[6]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.371 ns  ; VGAController:VGA|HCount[5]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.354 ns  ; VGAController:VGA|HCount[6]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.345 ns  ; VGAController:VGA|HCount[5]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.332 ns  ; VGAController:VGA|VCount[1]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.299 ns  ; VGAController:VGA|VCount[9]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.284 ns  ; VGAController:VGA|VCount[0]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.270 ns  ; VGAController:VGA|HCount[7]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.259 ns  ; VGAController:VGA|HCount[7]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.228 ns  ; VGAController:VGA|HCount[6]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.219 ns  ; VGAController:VGA|HCount[5]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.208 ns  ; VGAController:VGA|HCount[6]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.199 ns  ; VGAController:VGA|HCount[5]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.197 ns  ; VGAController:VGA|VCount[3]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.196 ns  ; VGAController:VGA|VCount[6]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.190 ns  ; VGAController:VGA|VCount[3]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.171 ns  ; VGAController:VGA|HCount[10] ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.168 ns  ; VGAController:VGA|HCount[4]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.167 ns  ; VGAController:VGA|VCount[3]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.161 ns  ; VGAController:VGA|HCount[4]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.154 ns  ; VGAController:VGA|VCount[7]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.141 ns  ; VGAController:VGA|VCount[3]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.138 ns  ; VGAController:VGA|HCount[4]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.137 ns  ; VGAController:VGA|HCount[8]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.126 ns  ; VGAController:VGA|VCount[2]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.115 ns  ; VGAController:VGA|VCount[2]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.112 ns  ; VGAController:VGA|HCount[4]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.077 ns  ; VGAController:VGA|VCount[1]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.066 ns  ; VGAController:VGA|VCount[1]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.044 ns  ; VGAController:VGA|VCount[9]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.039 ns  ; VGAController:VGA|HCount[7]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.033 ns  ; VGAController:VGA|VCount[9]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.032 ns  ; VGAController:VGA|HCount[7]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.029 ns  ; VGAController:VGA|VCount[0]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.018 ns  ; VGAController:VGA|VCount[0]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.015 ns  ; VGAController:VGA|VCount[3]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 10.009 ns  ; VGAController:VGA|HCount[7]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.995 ns   ; VGAController:VGA|VCount[3]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.986 ns   ; VGAController:VGA|HCount[4]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.985 ns   ; VGAController:VGA|HCount[9]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.983 ns   ; VGAController:VGA|HCount[7]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.966 ns   ; VGAController:VGA|HCount[4]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.951 ns   ; VGAController:VGA|VCount[4]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.941 ns   ; VGAController:VGA|VCount[6]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.930 ns   ; VGAController:VGA|VCount[6]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.926 ns   ; VGAController:VGA|VCount[8]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.923 ns   ; VGAController:VGA|HCount[6]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.916 ns   ; VGAController:VGA|HCount[10] ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.914 ns   ; VGAController:VGA|HCount[5]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.905 ns   ; VGAController:VGA|HCount[10] ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.904 ns   ; VGAController:VGA|HCount[11] ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.899 ns   ; VGAController:VGA|VCount[7]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.895 ns   ; VGAController:VGA|VCount[2]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.893 ns   ; VGAController:VGA|HCount[6]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.888 ns   ; VGAController:VGA|VCount[2]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.888 ns   ; VGAController:VGA|VCount[7]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.884 ns   ; VGAController:VGA|HCount[5]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.882 ns   ; VGAController:VGA|HCount[8]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.871 ns   ; VGAController:VGA|HCount[8]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.865 ns   ; VGAController:VGA|VCount[2]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.857 ns   ; VGAController:VGA|HCount[7]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.846 ns   ; VGAController:VGA|VCount[1]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.839 ns   ; VGAController:VGA|VCount[1]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.839 ns   ; VGAController:VGA|VCount[2]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.837 ns   ; VGAController:VGA|HCount[7]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.816 ns   ; VGAController:VGA|VCount[1]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.816 ns   ; VGAController:VGA|VCount[11] ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.813 ns   ; VGAController:VGA|VCount[9]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.806 ns   ; VGAController:VGA|VCount[9]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.798 ns   ; VGAController:VGA|VCount[0]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.791 ns   ; VGAController:VGA|VCount[0]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.790 ns   ; VGAController:VGA|VCount[1]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.783 ns   ; VGAController:VGA|VCount[9]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.768 ns   ; VGAController:VGA|VCount[0]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.757 ns   ; VGAController:VGA|VCount[9]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.742 ns   ; VGAController:VGA|VCount[0]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.730 ns   ; VGAController:VGA|HCount[9]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.719 ns   ; VGAController:VGA|HCount[9]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.713 ns   ; VGAController:VGA|VCount[2]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.710 ns   ; VGAController:VGA|VCount[3]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.710 ns   ; VGAController:VGA|VCount[6]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.703 ns   ; VGAController:VGA|VCount[6]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.696 ns   ; VGAController:VGA|VCount[4]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.693 ns   ; VGAController:VGA|VCount[2]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.691 ns   ; VGAController:VGA|HCount[6]  ; VGAb[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.685 ns   ; VGAController:VGA|VCount[4]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.685 ns   ; VGAController:VGA|HCount[10] ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.684 ns   ; VGAController:VGA|VCount[10] ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.682 ns   ; VGAController:VGA|HCount[5]  ; VGAb[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.681 ns   ; VGAController:VGA|HCount[4]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.680 ns   ; VGAController:VGA|VCount[6]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.680 ns   ; VGAController:VGA|VCount[3]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.678 ns   ; VGAController:VGA|HCount[10] ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.671 ns   ; VGAController:VGA|VCount[8]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.668 ns   ; VGAController:VGA|VCount[7]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.664 ns   ; VGAController:VGA|VCount[1]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.661 ns   ; VGAController:VGA|VCount[7]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.660 ns   ; VGAController:VGA|VCount[8]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.655 ns   ; VGAController:VGA|HCount[10] ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.654 ns   ; VGAController:VGA|VCount[6]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.651 ns   ; VGAController:VGA|HCount[8]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.651 ns   ; VGAController:VGA|HCount[4]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.649 ns   ; VGAController:VGA|HCount[11] ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.644 ns   ; VGAController:VGA|HCount[8]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.644 ns   ; VGAController:VGA|VCount[1]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.638 ns   ; VGAController:VGA|VCount[7]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.638 ns   ; VGAController:VGA|HCount[11] ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.631 ns   ; VGAController:VGA|VCount[9]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.629 ns   ; VGAController:VGA|HCount[10] ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.621 ns   ; VGAController:VGA|HCount[8]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.616 ns   ; VGAController:VGA|VCount[0]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.612 ns   ; VGAController:VGA|VCount[7]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.611 ns   ; VGAController:VGA|VCount[9]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.596 ns   ; VGAController:VGA|VCount[0]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.595 ns   ; VGAController:VGA|HCount[8]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.561 ns   ; VGAController:VGA|VCount[11] ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.552 ns   ; VGAController:VGA|HCount[7]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.550 ns   ; VGAController:VGA|VCount[11] ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.528 ns   ; VGAController:VGA|VCount[6]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.522 ns   ; VGAController:VGA|HCount[7]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.508 ns   ; VGAController:VGA|VCount[6]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.503 ns   ; VGAController:VGA|HCount[10] ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.499 ns   ; VGAController:VGA|HCount[9]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.492 ns   ; VGAController:VGA|HCount[9]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.486 ns   ; VGAController:VGA|VCount[7]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.483 ns   ; VGAController:VGA|HCount[10] ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.478 ns   ; VGAController:VGA|VCount[3]  ; VGAb[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.476 ns   ; VGAController:VGA|VCount[5]  ; VGAr[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.469 ns   ; VGAController:VGA|HCount[9]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.469 ns   ; VGAController:VGA|HCount[8]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.466 ns   ; VGAController:VGA|VCount[7]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.465 ns   ; VGAController:VGA|VCount[4]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.458 ns   ; VGAController:VGA|VCount[4]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.449 ns   ; VGAController:VGA|HCount[4]  ; VGAb[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.449 ns   ; VGAController:VGA|HCount[8]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.443 ns   ; VGAController:VGA|HCount[9]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.440 ns   ; VGAController:VGA|VCount[8]  ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.435 ns   ; VGAController:VGA|VCount[4]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.433 ns   ; VGAController:VGA|VCount[8]  ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.429 ns   ; VGAController:VGA|VCount[10] ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.418 ns   ; VGAController:VGA|VCount[10] ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.418 ns   ; VGAController:VGA|HCount[11] ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.411 ns   ; VGAController:VGA|HCount[11] ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.410 ns   ; VGAController:VGA|VCount[8]  ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.409 ns   ; VGAController:VGA|VCount[4]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.408 ns   ; VGAController:VGA|VCount[2]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.388 ns   ; VGAController:VGA|HCount[11] ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.384 ns   ; VGAController:VGA|VCount[8]  ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.378 ns   ; VGAController:VGA|VCount[2]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.362 ns   ; VGAController:VGA|HCount[11] ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.359 ns   ; VGAController:VGA|VCount[1]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.330 ns   ; VGAController:VGA|VCount[11] ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.329 ns   ; VGAController:VGA|VCount[1]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.326 ns   ; VGAController:VGA|VCount[9]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.323 ns   ; VGAController:VGA|VCount[11] ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.320 ns   ; VGAController:VGA|HCount[7]  ; VGAb[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.317 ns   ; VGAController:VGA|HCount[9]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.311 ns   ; VGAController:VGA|VCount[0]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.300 ns   ; VGAController:VGA|VCount[11] ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.297 ns   ; VGAController:VGA|HCount[9]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.296 ns   ; VGAController:VGA|VCount[9]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.283 ns   ; VGAController:VGA|VCount[4]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.281 ns   ; VGAController:VGA|VCount[0]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.274 ns   ; VGAController:VGA|VCount[11] ; VGAr[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.263 ns   ; VGAController:VGA|VCount[4]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.258 ns   ; VGAController:VGA|VCount[8]  ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.238 ns   ; VGAController:VGA|VCount[8]  ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.236 ns   ; VGAController:VGA|HCount[11] ; VGAg[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.223 ns   ; VGAController:VGA|VCount[6]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.221 ns   ; VGAController:VGA|VCount[5]  ; VGAg[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.216 ns   ; VGAController:VGA|HCount[11] ; VGAr[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.209 ns   ; VGAController:VGA|VCount[5]  ; VGAb[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.198 ns   ; VGAController:VGA|HCount[10] ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.198 ns   ; VGAController:VGA|VCount[10] ; VGAg[1] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.193 ns   ; VGAController:VGA|VCount[6]  ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.191 ns   ; VGAController:VGA|VCount[10] ; VGAb[2] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.181 ns   ; VGAController:VGA|VCount[7]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.176 ns   ; VGAController:VGA|VCount[2]  ; VGAb[0] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.168 ns   ; VGAController:VGA|VCount[10] ; VGAb[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.168 ns   ; VGAController:VGA|HCount[10] ; VGAr[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.164 ns   ; VGAController:VGA|HCount[8]  ; VGAg[3] ; Clock27    ;
+; N/A                                     ; None                                                ; 9.151 ns   ; VGAController:VGA|VCount[7]  ; VGAr[3] ; Clock27    ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                              ;         ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+------------------------------+---------+------------+
+
+
++-------------------------------------------------------------------------+
+; tpd                                                                     ;
++-------+-------------------+-----------------+-------------+-------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From        ; To          ;
++-------+-------------------+-----------------+-------------+-------------+
+; N/A   ; None              ; 12.185 ns       ; CamData[10] ; VGAr[2]     ;
+; N/A   ; None              ; 11.930 ns       ; CamData[10] ; VGAg[2]     ;
+; N/A   ; None              ; 11.750 ns       ; CamData[11] ; VGAb[3]     ;
+; N/A   ; None              ; 11.692 ns       ; CamData[10] ; VGAb[2]     ;
+; N/A   ; None              ; 11.597 ns       ; CamData[9]  ; VGAb[1]     ;
+; N/A   ; None              ; 11.538 ns       ; CamData[8]  ; VGAg[0]     ;
+; N/A   ; None              ; 11.518 ns       ; CamData[8]  ; VGAr[0]     ;
+; N/A   ; None              ; 11.377 ns       ; CamData[9]  ; VGAg[1]     ;
+; N/A   ; None              ; 11.321 ns       ; CamData[9]  ; VGAr[1]     ;
+; N/A   ; None              ; 11.293 ns       ; CamData[11] ; VGAg[3]     ;
+; N/A   ; None              ; 11.263 ns       ; CamData[11] ; VGAr[3]     ;
+; N/A   ; None              ; 11.001 ns       ; CamData[8]  ; VGAb[0]     ;
+; N/A   ; None              ; 8.930 ns        ; Reset       ; CamReset    ;
+; N/A   ; None              ; 5.801 ns        ; Clock50     ; CamExtClock ;
++-------+-------------------+-----------------+-------------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 7.2 Build 151 09/26/2007 SJ Web Edition
+    Info: Processing started: Sun Apr 28 15:09:55 2013
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off FaceDetection -c FaceDetection --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Clock27" is an undefined clock
+Info: Clock "Clock27" has Internal fmax of 312.01 MHz between source register "VGAController:VGA|HCount[6]" and destination register "VGAController:VGA|VCount[2]" (period= 3.205 ns)
+    Info: + Longest register to register delay is 2.992 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X11_Y15_N17; Fanout = 5; REG Node = 'VGAController:VGA|HCount[6]'
+        Info: 2: + IC(0.525 ns) + CELL(0.371 ns) = 0.896 ns; Loc. = LCCOMB_X12_Y15_N14; Fanout = 2; COMB Node = 'VGAController:VGA|Equal0~107'
+        Info: 3: + IC(0.403 ns) + CELL(0.389 ns) = 1.688 ns; Loc. = LCCOMB_X11_Y15_N28; Fanout = 13; COMB Node = 'VGAController:VGA|Equal0~110'
+        Info: 4: + IC(0.644 ns) + CELL(0.660 ns) = 2.992 ns; Loc. = LCFF_X13_Y15_N9; Fanout = 5; REG Node = 'VGAController:VGA|VCount[2]'
+        Info: Total cell delay = 1.420 ns ( 47.46 % )
+        Info: Total interconnect delay = 1.572 ns ( 52.54 % )
+    Info: - Smallest clock skew is 0.001 ns
+        Info: + Shortest clock path from clock "Clock27" to destination register is 2.641 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.969 ns) = 0.969 ns; Loc. = PIN_D12; Fanout = 1; CLK Node = 'Clock27'
+            Info: 2: + IC(0.218 ns) + CELL(0.000 ns) = 1.187 ns; Loc. = CLKCTRL_G11; Fanout = 26; COMB Node = 'Clock27~clkctrl'
+            Info: 3: + IC(0.917 ns) + CELL(0.537 ns) = 2.641 ns; Loc. = LCFF_X13_Y15_N9; Fanout = 5; REG Node = 'VGAController:VGA|VCount[2]'
+            Info: Total cell delay = 1.506 ns ( 57.02 % )
+            Info: Total interconnect delay = 1.135 ns ( 42.98 % )
+        Info: - Longest clock path from clock "Clock27" to source register is 2.640 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.969 ns) = 0.969 ns; Loc. = PIN_D12; Fanout = 1; CLK Node = 'Clock27'
+            Info: 2: + IC(0.218 ns) + CELL(0.000 ns) = 1.187 ns; Loc. = CLKCTRL_G11; Fanout = 26; COMB Node = 'Clock27~clkctrl'
+            Info: 3: + IC(0.916 ns) + CELL(0.537 ns) = 2.640 ns; Loc. = LCFF_X11_Y15_N17; Fanout = 5; REG Node = 'VGAController:VGA|HCount[6]'
+            Info: Total cell delay = 1.506 ns ( 57.05 % )
+            Info: Total interconnect delay = 1.134 ns ( 42.95 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tco from clock "Clock27" to destination pin "VGAr[2]" through register "VGAController:VGA|HCount[6]" is 10.896 ns
+    Info: + Longest clock path from clock "Clock27" to source register is 2.640 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.969 ns) = 0.969 ns; Loc. = PIN_D12; Fanout = 1; CLK Node = 'Clock27'
+        Info: 2: + IC(0.218 ns) + CELL(0.000 ns) = 1.187 ns; Loc. = CLKCTRL_G11; Fanout = 26; COMB Node = 'Clock27~clkctrl'
+        Info: 3: + IC(0.916 ns) + CELL(0.537 ns) = 2.640 ns; Loc. = LCFF_X11_Y15_N17; Fanout = 5; REG Node = 'VGAController:VGA|HCount[6]'
+        Info: Total cell delay = 1.506 ns ( 57.05 % )
+        Info: Total interconnect delay = 1.134 ns ( 42.95 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 8.006 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X11_Y15_N17; Fanout = 5; REG Node = 'VGAController:VGA|HCount[6]'
+        Info: 2: + IC(0.525 ns) + CELL(0.371 ns) = 0.896 ns; Loc. = LCCOMB_X12_Y15_N14; Fanout = 2; COMB Node = 'VGAController:VGA|Equal0~107'
+        Info: 3: + IC(0.251 ns) + CELL(0.419 ns) = 1.566 ns; Loc. = LCCOMB_X12_Y15_N10; Fanout = 1; COMB Node = 'VGAController:VGA|oRed~96'
+        Info: 4: + IC(0.278 ns) + CELL(0.413 ns) = 2.257 ns; Loc. = LCCOMB_X12_Y15_N6; Fanout = 4; COMB Node = 'VGAController:VGA|oRed~98'
+        Info: 5: + IC(0.293 ns) + CELL(0.410 ns) = 2.960 ns; Loc. = LCCOMB_X12_Y15_N24; Fanout = 3; COMB Node = 'VGAController:VGA|oRed[2]~101'
+        Info: 6: + IC(2.258 ns) + CELL(2.788 ns) = 8.006 ns; Loc. = PIN_A7; Fanout = 0; PIN Node = 'VGAr[2]'
+        Info: Total cell delay = 4.401 ns ( 54.97 % )
+        Info: Total interconnect delay = 3.605 ns ( 45.03 % )
+Info: Longest tpd from source pin "CamData[10]" to destination pin "VGAr[2]" is 12.185 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_G15; Fanout = 1; PIN Node = 'CamData[10]'
+    Info: 2: + IC(6.169 ns) + CELL(0.150 ns) = 7.139 ns; Loc. = LCCOMB_X12_Y15_N24; Fanout = 3; COMB Node = 'VGAController:VGA|oRed[2]~101'
+    Info: 3: + IC(2.258 ns) + CELL(2.788 ns) = 12.185 ns; Loc. = PIN_A7; Fanout = 0; PIN Node = 'VGAr[2]'
+    Info: Total cell delay = 3.758 ns ( 30.84 % )
+    Info: Total interconnect delay = 8.427 ns ( 69.16 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Allocated 113 megabytes of memory during processing
+    Info: Processing ended: Sun Apr 28 15:09:58 2013
+    Info: Elapsed time: 00:00:03
+
+

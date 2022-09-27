@@ -1,0 +1,1 @@
+Warning (10236): Verilog HDL Implicit Net warning at FaceDetection.v(144): created implicit net for "VGA_CLK"

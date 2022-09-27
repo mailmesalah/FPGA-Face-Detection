@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.896 ns
+From           : VGAController:VGA|HCount[6]
+To             : VGAr[2]
+From Clock     : Clock27
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.185 ns
+From           : CamData[10]
+To             : VGAr[2]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Clock27'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 312.01 MHz ( period = 3.205 ns )
+From           : VGAController:VGA|HCount[6]
+To             : VGAController:VGA|VCount[7]
+From Clock     : Clock27
+To Clock       : Clock27
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
